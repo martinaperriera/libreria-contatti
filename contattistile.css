@@ -6,18 +6,25 @@ body {
 .main-content {
     display: flex;
     padding-top: 4rem;
-    justify-content: center;
-    align-items: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    float: left;
     flex-wrap: wrap;
     gap: 20px;
-
+    box-sizing: border-box;
+    width: 60%;
+    padding: 10px;
 }
 .contact-form {
     background: #fff;
+    margin-top: 4rem;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgb(58, 23, 114);
-    width: 100%;
+    width: 100%; 
+    flex: 1 1 300px;
     max-width: 600px;
     min-width: 300px;
     margin-bottom: 20px;
@@ -25,21 +32,8 @@ body {
     box-sizing: border-box;
 
 }
-
 .main-content h3 {
     color: rgb(58, 23, 114);
-    justify-content: center; 
-
-    }
-
-.mappa {
-    flex: 1;
-    min-width: 300px;
-    justify-content: center; 
-}
-.infocontatto {
-    margin-top: 20px; 
-    text-align: left;
 }
 .contact-form h2 {
     margin-bottom: 20px;
@@ -57,21 +51,18 @@ body {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    max-width: 500px;
-    width: 95%;
-    margin-top: 5px;
     box-sizing: border-box;
 }
 .privacycheckbox {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; 
     align-items:center;
     padding: 0;
     float:inline-start;
 }
 
 .privacycheckbox label {
-    margin-left: 1px;  
+    margin-left: 5px;  
     font-size: 10px; 
 }
 .contact-form button {
@@ -91,26 +82,53 @@ body {
 .mappaeinfo {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    flex: 1 1 100px;
+    justify-content: flex-start;
+    align-items: stretch; 
+    max-width: 600px;
 }
-
+.mappaeinfo h3 {
+    margin-top: 1px;
+}
 .mappa {
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 20px;
+    margin-top: 4rem;
+    width: 80%;
+    margin-bottom:5px;
 }
-
 .infocontatto {
-    width: 100%;
-    max-width: 600px;
+    margin-top: 20px; 
     text-align: left;
+    width: 100%;
 }
 @media (max-width: 768px) {
     .main-content {
+        width: 100%;
         flex-direction: column;
+        align-items: center;
+
     }
-    .contact-info {
-        text-align: center; 
+    .contact-form, .mappaeinfo {
+        width: 100%;
+        max-width: 600px;
+    }
+    .infocontatto {
+        text-align: left;
+    }
+}
+@media (max-width:430px) {
+    .main-content {
+        max-width: 400px;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .mappa {
+        width: 50%;
+        max-width: 300px;
+
+   }
+    .infocontatto {
+        text-align: left;
     }
 }
 
